@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Andika&family=Bellefair&family=Capriola&family=Flamenco&family=Forum&family=Fredericka+the+Great&family=GFS+Neohellenic&family=Philosopher&family=Pompiere&family=Tenali+Ramakrishna&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Finlandica&family=Foldit&family=Fredericka+the+Great&family=Gemunu+Libre&family=Geo&family=Lekton&family=Lexend+Peta&family=Lexend+Tera&family=Martian+Mono&family=MuseoModerno&family=Orbit&family=Rubik+Dirt&family=Shippori+Antique&family=Tourney&family=Train+One&family=Tulpen+One&display=swap');
+
+@font-face {
+  font-family: "Yoppa_fude";
+  src: url("/jap_font/Yoppa_fude.woff2") format("woff2"),
+    url("/jap_font/Yoppa_fude.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: black;
+  border-top: solid 10px tomato;
+  border-bottom: solid 10px tomato;
+}
+
+/* Font Section */
+.font-mufan {
+  font-family: var(--font-mufan);
+}
+.font-amanojaku {
+  font-family: var(--font-amanojaku);
+}
+
+.rectangle-small {
+  width: 10rem;
+  height: 5rem;
+  background: radial-gradient(circle at 15% 20%, dodgerblue, blue);
+  box-shadow: 3px 3px 6px 0 rgba(0 0 0 / 0.4);
+}
+
+.square-small {
+  width: 5rem;
+  height: 5rem;
+  background: radial-gradient(circle at 20% 20%, dodgerblue, blue);
+  box-shadow: 3px 3px 6px 0 rgba(0 0 0 / 0.4);
+}
+
+.corner-shape {
+  border-radius: 10rem !important;
+  corner-shape: squircle !important;
+}
+
+.Disabled {
+  opacity: 30% !important;
+  user-select: none !important;
+  cursor: no-drop !important;
+}
+
+.jap {
+  font-family: "Yoppa_fude", sans-serif;
+}
+
+.notFound {
+  filter: opacity(1);
+  transform: scale(1);
+  animation-name: notFound;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+  .notFound {
+    width: 200px;
+  }
+}
+
+@keyframes notFound {
+  0% {
+    filter: opacity(0);
+    transform: scale(.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    filter: opacity(1);
+    transform: scale(1);
+  }
+
+}
